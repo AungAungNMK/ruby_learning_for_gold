@@ -59,5 +59,9 @@ class Symbol
         eigenclass.instance_eval {define_method(sym, f)}
     end
 end
-
+#
+#
+#
+#The clever method to write y = 2 * x + 1
+y = (:+[1]*:*[2])[x]
 

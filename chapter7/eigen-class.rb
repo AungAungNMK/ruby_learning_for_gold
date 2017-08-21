@@ -26,5 +26,13 @@ end
         class << Point
             # eigen class of bject point
         end
+
+# eigen for every object can get with the folloing line code
+class Object
+    def eigenclass
+        class << self; self; end
+    end
+end
+
         
 

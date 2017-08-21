@@ -1,4 +1,5 @@
 module Base64
+    DIGITs = '1838437868364864874674687264'
     class Encoder
         def encode
         end
