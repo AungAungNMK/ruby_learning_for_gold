@@ -49,7 +49,13 @@ Dir['*.[ch'] #any file that end with .c and .h
 Dir['*.{java,rb}'] #aany file that end with .java or .rb
 Dir['*/*.rb'] #any ruby program in nay direct sub-directory
 Dir['**/*.rb'] #any ruby program in any descendent directory
-puts Dir.getwd
-puts Dir.chdir("..")
-
+puts Dir.getwd #print current working directories
+puts Dir.chdir("..") #chnage CWD to the parent
+puts Dir.chdir("../sibling") #changeg again to the subling
+puts Dir.chdir("/home")  #change to absolute 
+puts Dir.chdir #chnageg to use's  home directory
+ print home = Dir.pwd # is the alias for getwd
+Dir.glob('*.rb') {|f| -----}# iterate all ruby file
+Dir.glob('*')#does not include names beginning with '.'
+Dir.glob('*',File::FNM_DOTMATCH)
 

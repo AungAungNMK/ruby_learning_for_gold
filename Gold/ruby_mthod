@@ -1,0 +1,14 @@
+Discription of 11 methods :
+ISEQ(Instruction Sequence) :the most common ruby method
+CFUN(C Functioon)    :C code inserted directly inside the ruby
+ATTRSET(attribute set) :a method of this type is created by attr_writer.
+IVAR(instance var) :ruby uses this method when you call attr_reader.
+BMEHTOD  :ruby uses this method type when you call define_method and pass in proc object.
+ZSUPER :ruby uses this method when you set a method to be private or public in a particular class or module when it was actually defined in some superclass.
+UNDEF :ruby uses this method type internally what it is neededto remove a method from a class.undef_method,UNDEF
+NOTIMPLEMENTED :ruby uses this method type to make certain mthods as not implemented.
+                This is necessary ,for exmple, when you run ruby in a platform that doesn't support a particular opening system call.
+OPTIMIZED :ruby speed up some important methods, using this type .like Kernel#send method.
+MISSING :ruby uses this method type if you ask for a method object from a module or class using Kernel#method and the method is MISSING.
+REFINED :ruby uses this method type in it implemention of refinements.
+
