@@ -1,5 +1,4 @@
 class A
- 
  def public_method
    p "public method in A"
    protected_method
