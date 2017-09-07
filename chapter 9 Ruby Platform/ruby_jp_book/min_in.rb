@@ -72,5 +72,5 @@ class C2
     end
 end
 print C2.instance_methods(false) #[:method1]
-print C2.new.method1
+print C2.new.method1 #
 print C2.instance_methods(false) #[:method1, :method2]
