@@ -1,13 +1,13 @@
 a = [1,2,3]
-p a.class
+p a.class #array
 a = Array[1,2,3]
-p a 
+p a #[1,2,3]
 aa = Array.new(3, "str")
-p aa 
+p aa #["str", "str", "str"]
 a = Array.new([1,2,3])
-p a 
+p a #[1,2,3]
 a = Array.new(3) {|i| i * 3}
-p a 
+p a #[0,3,6]
 =begin
 <<
 push
@@ -18,11 +18,11 @@ unshift
 =end
 a = [1,2,3]
 a << 4 
-p a
+p a #[1,2,3,4]
 a << 5 << 6
-p a 
+p a #[1,2,3,4,5,6]
 a.insert(3,9)
-p a 
+p a #[1,2,3,4,5,6,9]
 p a.__id__
 b = a + [10]
 p b 
@@ -32,9 +32,9 @@ p a.unshift(10)
 #[]=. fill ,replace
 a = [1,2,3]
 a[1] = 10
-p a 
+p a #[1,10,3]
 a[1..2] = [11,12]
-p a 
+p a #[1,11,12]
 a[8] = 8
 p a 
 a = [1,2,3]
@@ -52,7 +52,7 @@ p a.__id__
 a.replace([4,5,6])
 p a 
 p a.__id__
-puts "If you replace the array with new data ,the object_id same."
+puts "If you replace the array with new data ,the object_id is always same."
 =begin
     []
     slice
@@ -65,10 +65,10 @@ puts "If you replace the array with new data ,the object_id same."
     rassoc
 =end
 a = [1,2,3]
-p a[1]
-p a.at(1)
-p a[1..2]
-p a.values_at(1)
+p a[1] #2
+p a.at(1) #2
+p a[1..2] #[2,3]
+p a.values_at(1) 
 p a.fetch(2)
 p a.fetch 4, "ERROR"
 a.fetch(4) {|n| "ERROR #{n}"}
@@ -170,4 +170,4 @@ p [1,2,3,4].shuffle
 p [1,2].product(["a","b","c"]) #like *
 p [1,2].zip(["a","b"]) #depends on position
 p [1,2] * 4 
-p ["aung"].pack('m')
+p ["somestring"].pack('m')
