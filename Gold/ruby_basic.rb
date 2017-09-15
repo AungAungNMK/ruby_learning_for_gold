@@ -328,3 +328,23 @@ p /ruby/ === "RUBY" #false
 p /ruby/i === "RUBY" #:true :ignore case
 p /a.*b/ === "a\nb" #false
 p /a.*b/m === "a\nb" #true :m=> multiline
+def func x 
+    x + yield
+end
+p func(1) { 2 } #3
+def func y
+    y + yield
+end
+func(1) do
+x = 2
+end
+#p x #undefined local variable or method `x' for main:Object (NameError)
+def func y
+    y + yield
+end
+x = 2
+func(1) do
+x += 2
+end
+p x  #4
+
