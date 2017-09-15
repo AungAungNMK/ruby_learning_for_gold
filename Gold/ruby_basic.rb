@@ -347,4 +347,3 @@ func(1) do
 x += 2
 end
 p x  #4
-
