@@ -22,4 +22,5 @@ puts String.class_eval{ class_variable_get(:@@x)}
 def Symbol.const_missing(name)
     name
 end
-puts Symbol::Test
+puts Symbol::Test#Test
+p Symbol::A #A

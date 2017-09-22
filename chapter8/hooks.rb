@@ -5,7 +5,7 @@ module Final
     def self.included(c)
         c.instance_eval do
             def inherited(sub)
-                raise Exception, "Attempt t ocreate subcass #{sub} of the final class #{sellf}"
+                raise Exception, "Attempt to create subclass #{sub} of the final class #{sellf}"
             end
         end
     end
@@ -16,12 +16,12 @@ def String.method_added(name)
 end
 #############################
 def String.singleton_method_added(name)
-    puts "new class method #{name} is added to he string"
+    puts "new class method #{name} is added to the string"
 end
 ###########################################
 module Strict
     def singleton_method_added(name)
-        STDERR.puts "Wrning: SIngleton #{name} added to teh strict object"
+        STDERR.puts "Wrning: Singleton #{name} added to the strict object"
         eigenclass = class << self; self; end
         eigenclass.class_eval { remove_method name}
     end

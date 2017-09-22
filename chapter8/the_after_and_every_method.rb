@@ -1,5 +1,3 @@
-after 1 { puts "done" }
-every 60 { redraw_clock }
 #boh methods return threds objct.call kill in the return object to cancel the execution 
 #Exxecution ofthe block after sleeping the specified numebr of the secons
 def after(seconds, &block)
@@ -16,6 +14,5 @@ def every(seconds, value = nil, &block)
         end
     end
 end
-
-
-
+after 1 { "done" }
+every 60 { redraw_clock }

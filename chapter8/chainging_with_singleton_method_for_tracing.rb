@@ -1,4 +1,4 @@
-require 'classtrace'
+#require 'classtrace'
 class Object
     def trace!(*methodss)
         @_traced = @_traced || []

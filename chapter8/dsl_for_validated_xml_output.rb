@@ -84,8 +84,3 @@ HTMLForm.generate(STDOUT) do
         button { "submit"}
     end
 end
-
-
-
-
-
