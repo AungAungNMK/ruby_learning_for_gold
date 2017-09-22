@@ -1,4 +1,5 @@
 def Point 
+    attr_accessor :n, :totalX, :totalY
     @@n = 0
     @@totalX = 0
     @@totalY = 0
@@ -15,4 +16,3 @@ def Point
     end
 end
 # class var are  aways evaluated in reference to the class object created by enclosing  class def statement
-
