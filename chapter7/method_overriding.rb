@@ -23,8 +23,6 @@ class AbsractGreeter
 end
 class WorldGreeter1 < AbsractGreeter
     def greeting; "Hello"; end
-    def who; "Worlld"; end
+    def who; "World"; end
 end
 puts WorldGreeter1.new.greet
-
-

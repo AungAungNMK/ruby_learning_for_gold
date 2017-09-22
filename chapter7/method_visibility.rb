@@ -3,11 +3,11 @@
 #pricate
 class Widget
     def x
-        @x
+        @x = "Ruby"
     end
     protected :x
     def utility_method
-        nil
+        "String"
     end
     private :utility_method
 end
