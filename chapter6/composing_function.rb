@@ -9,5 +9,3 @@ module Functional
     alias *compose
 end
 #use of comose with method object
-
-

@@ -23,5 +23,3 @@ def test
     l.call
 end
 test
-
-

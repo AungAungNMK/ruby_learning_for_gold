@@ -11,7 +11,7 @@ class Point
 end
 # to allow marshalling but prevent copying ,so the class as the following
 class Season
-     NAMES = %w { Spring Summer Winter}
+     NAMES = %w{ Spring Summer Winter}
     INSTANCES = []
     def initialize(n)
         @n = n
