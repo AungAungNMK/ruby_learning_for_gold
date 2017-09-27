@@ -1,6 +1,6 @@
 def two;yield 1,2;end
-two {|*x| puts x }
-two {|x| puts x }
+two {|*x| p x }
+two {|x| p x }
 puts "-----------------------------------------"
 def five
     yield 1,2,3,4,5

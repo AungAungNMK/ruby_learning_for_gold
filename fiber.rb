@@ -1,5 +1,5 @@
 f = Fiber.new {
-    puts "Fibers sau Hello"
+    puts "Fibers say Hello"
     Fiber.yield
     puts "Fiber says GoodBye"
 }

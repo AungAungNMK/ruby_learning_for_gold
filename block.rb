@@ -4,11 +4,11 @@
     end
     print "row is #{i} \n"
 end
-puts "test the other damle in Block--------------"
+puts "test the other in Block--------------"
 x = y = 0
 1.upto(4) do|x;y|
 y = x + 1
-puts y * y
+p y * y
 end
 [x,y]
 

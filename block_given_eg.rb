@@ -8,4 +8,4 @@ def sequence(n,m,c)
     end
     s
 end
-sequence(3,5,1)
+p sequence(3,5,1)

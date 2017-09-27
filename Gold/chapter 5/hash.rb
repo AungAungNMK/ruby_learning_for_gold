@@ -2,13 +2,13 @@ a = {"apple"=> "fruit","coffee"=> "drink"}
 p a.class
 p Hash["apple"=> "fruit","coffee"=> "drink"]
 p a = Hash.new
-p a["apple"]
-p a = Hash.new("NIL")
+p a["apple"] #nil
+p a = Hash.new("NIL") #nil
 p a["apple"]
 p a = Hash.new{|k,v| k[v] = nil}
-p a["apple"]
+p a["apple"] #nil
 p a = Hash.new{|k,v| k[v] = "NONE"}
-p a["apple"]
+p a["apple"] #none
 a= Hash.new("NONE")
 p a.default
 a.default = "Not Exists!."
@@ -27,9 +27,9 @@ p a.keys
 p a.values
 a = { 1 => "one",2 => "two",3 => "three",4 => "four"}
 p a.values_at(1,3) #values in that position
-p a.fetch(5,"NONE")
-p a.fetch(5) {|k,v| k%2 == 0}
-p a.select{|k,v| k%2 == 0}
+p a.fetch(5,"NONE") #NONE
+p a.fetch(5) {|k,v| k%2 == 0} #false
+p a.select{|k,v| k%2 == 0} #[[2 ,"two"],[4, "four"]]
 =begin
 []=
 delete
@@ -45,27 +45,27 @@ clear
 =end
 a = {"apple"=> "fruit","coffee"=> "drink"}
 a["apple"] = "red"
-p a 
+p a #{"apple"=> "red","coffee"=> "drink"}
 a["orange"] = "Added one"
-p a 
+p a #{"orange" => "added one", apple"=> "fruit","coffee"=> "drink"}
 a = {"apple"=> "fruit","coffee"=> "drink"}
 a.delete("apple")
-p a 
+p a #{"coffee"=> "drink"}
 a = {"apple"=> "fruit","coffee"=> "drink"}
 p a.reject{|k,v| v == "drink"}
-p a
+p a 
 p a.reject!{|k,v| v == "drink"}
-p a
+p a #{"apple"=> "fruit"}
 a = {"apple"=> "fruit","coffee"=> "drink"}
 p a.__id__
-p a.replace({"orance"=> "fruit","tea"=> "drink"})
+p a.replace({"orange"=> "fruit","tea"=> "drink"})
 p a.__id__#two object id equal if they being replace by another values 
-a.shift
-p a
+a.shift 
+p a #{"tea"=>"drink"}
 p a.merge({"one"=>"test1","two"=>"test2","three"=>"test3","four"=>"test4","five"=>"test5"})
 p a 
 p a.merge({"one"=>"test1","two"=>"test2","three"=>"test3","four"=>"test4","five"=>"test5"}){|k,v1,v2| v1}
-p a.merge!({"one"=>"test1","two"=>"test2","three"=>"test3","four"=>"test4","five"=>"test5"})
+p a.merge!({"one"=>"test1","two"=>"test2","three"=>"test3","four"=>"test4","five"=>"test5"}) #{"tea"=>"drink", "one"=>"test1", "two"=>"test2", "three"=>"test3", "four"=>"test4", "five"=>"test5"}
 p a.invert
 # p {"orange" => "fruit","coffee" => "drink","apple" => "fruit","tea" => "drink"}.invert
 p a.clear
